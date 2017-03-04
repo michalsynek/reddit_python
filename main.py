@@ -43,11 +43,18 @@ for submission in reddit.subreddit('learnpython').hot(limit=100):
 """
 
 #subreddit = reddit.subreddit('/r/vancouver')
-subreddit = reddit.subreddit('vancouver/new')
+subreddit = reddit.subreddit('vancouver')
 
 print(subreddit.display_name)  # Output: redditdev
 print(subreddit.title)         # Output: reddit Development
-print(subreddit.description)   # Output: A subreddit for discussion of 
+sub_description = subreddit.description   # Output: A subreddit for discussion of 
+
+output_file(sub_description, "sub_description")
+
+reddit.subreddit('vancouver').filters.add('#fg')
+print(subreddit.display_name)  # Output: redditdev
+print(subreddit.title)
+print(subreddit.description)
 
 submission = reddit.submission(url='https://www.reddit.com/r/vancouver/comments/5xgzb3/fyi_ubc_bus_loop_changes_as_of_march_6th/')
 
