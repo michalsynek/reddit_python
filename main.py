@@ -3,7 +3,7 @@ __credits__ = 'Martin Fiser, 2017, Twitter: @VFisa'
 
 # Import Libraries
 import os
-from config import *
+from configprivate import *
 import praw
 import pprint
 import time
