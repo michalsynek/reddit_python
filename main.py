@@ -42,21 +42,21 @@ for submission in reddit.subreddit('learnpython').hot(limit=100):
     print(submission.title)
 """
 
-#subreddit = reddit.subreddit('/r/vancouver')
-subreddit = reddit.subreddit('vancouver')
+#subreddit = reddit.subreddit('vancouver')
 
-print(subreddit.display_name)  # Output: redditdev
-print(subreddit.title)         # Output: reddit Development
-sub_description = subreddit.description   # Output: A subreddit for discussion of 
+#print(subreddit.display_name)  # Output: redditdev
+#print(subreddit.title)         # Output: reddit Development
+#sub_description = subreddit.description   # Output: A subreddit for discussion of 
 
-output_file(sub_description, "sub_description")
+#output_file(sub_description, "sub_description")
 
-reddit.subreddit('vancouver').filters.add('#fg')
-print(subreddit.display_name)  # Output: redditdev
-print(subreddit.title)
-print(subreddit.description)
+#subreddit = reddit.subreddit('vancouver').filters.add('transportation')
+#print(subreddit.display_name)  # Output: redditdev
+#print(subreddit.title)
+#print(subreddit.description)
 
-submission = reddit.submission(url='https://www.reddit.com/r/vancouver/comments/5xgzb3/fyi_ubc_bus_loop_changes_as_of_march_6th/')
+#submission = reddit.submission(url='https://www.reddit.com/r/vancouver/comments/5xgzb3/fyi_ubc_bus_loop_changes_as_of_march_6th/')
+submission = reddit.submission(id='2zlyk4')
 
 top_level_comments = list(submission.comments)
 all_comments = submission.comments.list()
